@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import calculatorImg from "./assets/calculator.png";
+import landingImg from "./assets/landing.png";
+import counterImg from "./assets/counter.png";
+
 
 export default function App() {
   const [dark, setDark] = useState(true);
@@ -17,7 +21,7 @@ export default function App() {
           >
             {dark ? "Light" : "Dark"}
           </button>
-        </nav>
+        </nav> 
 
         {/* Hero */}
         <motion.section
@@ -43,19 +47,77 @@ export default function App() {
           </div>
         </section>
 
-        {/* Projects */}
-        <section className="py-16 px-6 bg-gray-100 dark:bg-gray-950">
-          <h3 className="text-3xl font-semibold text-center mb-8">Projects</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1,2,3].map(p => (
-              <div key={p} className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow">
-                <h4 className="text-xl font-bold">Project {p}</h4>
-                <p className="text-sm mt-2 mb-3">Short project description here.</p>
-                <a href="#" className="text-blue-500">View →</a>
-              </div>
-            ))}
-          </div>
-        </section>
+       {/* Projects */}
+<section className="py-16 px-6 bg-gray-100 dark:bg-gray-950">
+  <h3 className="text-3xl font-semibold text-center mb-8">Projects</h3>
+
+  <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+    {/* Calculator */}
+   <div className="bg-white dark:bg-gray-900 rounded-xl shadow hover:scale-105 transition overflow-hidden">
+<img
+    src={calculatorImg}
+    alt="Calculator"
+    className="w-full transition-transform duration-300 hover:scale-110"
+  />
+  </div>
+  <div className="p-6">
+    <h4 className="text-xl font-bold mb-2">Calculator App</h4>
+    <p className="text-sm mb-4 text-gray-600 dark:text-gray-400">
+      A simple calculator built using HTML, CSS and JavaScript.
+    </p>
+    <div className="flex gap-4">
+      <a href="#" className="text-blue-500 font-medium">Live</a>
+      <a href="#" className="text-blue-500 font-medium">GitHub</a>
+    </div>
+  </div>
+</div>
+
+    {/* Landing Page */}
+    <div className="bg-white dark:bg-gray-900 rounded-xl shadow hover:scale-105 transition overflow-hidden">
+  <div className="overflow-hidden rounded-xl">
+  <img
+    src={landingImg}
+    alt="Landing Page"
+    className="w-full transition-transform duration-300 hover:scale-110"
+  />
+</div>
+
+  <div className="p-6">
+    <h4 className="text-xl font-bold mb-2">Responsive Landing Page</h4>
+    <p className="text-sm mb-4 text-gray-600 dark:text-gray-400">
+      A modern responsive landing page built using Tailwind CSS.
+    </p>
+    <div className="flex gap-4">
+      <a href="#" className="text-blue-500 font-medium">Live</a>
+      <a href="#" className="text-blue-500 font-medium">GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+    {/* Counter App */}
+    <div className="bg-white dark:bg-gray-900 rounded-xl shadow hover:scale-105 transition overflow-hidden">
+   <img
+    src={counterImg}
+    alt="Counter App"
+    className="w-full transition-transform duration-300 hover:scale-110"
+  />
+
+  <div className="p-6">
+    <h4 className="text-xl font-bold mb-2">Counter App</h4>
+    <p className="text-sm mb-4 text-gray-600 dark:text-gray-400">
+      A React counter app demonstrating state management using hooks.
+    </p>
+    <div className="flex gap-4">
+      <a href="#" className="text-blue-500 font-medium">Live</a>
+      <a href="#" className="text-blue-500 font-medium">GitHub</a>
+    </div>
+  </div>
+</div>
+
+</section>
+
 
         {/* Contact */}
         <section className="py-16 px-6">
